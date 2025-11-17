@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pop-up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="base">
+        <div class="popup">
+            <div class="top">
+                <img src="images/model.jpg" alt="" class="model">
+                <img src="images/close.png" alt="" class="close" onclick="closeModel()">
+            </div>
+            <div class="bottom">
+                <h1>Get 15% OFF</h1>
+                <p class="sub-heading">on all beauty product</p>
+
+                <p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, aliquam.</p>
+
+                <form>
+                    <input type="text" name="" id="email" placeholder="Email Adress" >
+                    <button>Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const popup = document.querySelector('.popup')
+
+        document.onmouseleave = function(){
+            popup.style.display = 'flex'
+        }
+
+        function closeModel(){
+           popup.style.display = 'none' 
+        }
+    </script>
+</body>
+</html>
