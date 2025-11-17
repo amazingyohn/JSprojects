@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/305142f610.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="page">
+        <div class="left">
+            <div class="background">
+                <div class="left-header">
+                    <p>Apilox</p>
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <div class="middle-text">
+                    <h2>Apilox Health</h2>
+                    <p>Your Neighboorhood Local</p>
+                </div>
+
+                <footer>
+                    <p>presecription now at your fingertip</p>
+                </footer>
+            </div>
+        </div>
+        <div class="right">
+            <div class="header">
+                <h1>Registration</h1>
+                <p>CLICK FOR YOUR SHOT</p>
+            </div>
+            <div class="entry">
+                <label for="name" class="name">Name:</label>
+                <input type="text" name="name" id="name" placeholder="Enter name" required>
+            </div>
+            <div class="entry">
+                <label for="name" class="name">Email:</label>
+                <input type="text" name="name" id="Email" placeholder="Enter Email" required>
+            </div>
+            <div class="entry">
+                <label for="name" class="name">Gender:</label>
+                <!-- <div class="input" id="gender">
+                    <div class="male" id="male">
+                        <i class="fa-solid fa-mars"></i>
+                    </div>
+                    <p>male</p>
+                    <div class="female" id="female">
+                        <i class="fa-solid fa-venus"></i>
+                    </div>
+                    <p>female</p>
+                </div> -->
+                <input type="text" name="gender" id="gender" placeholder="Enter gender" required>
+                
+            </div>
+            <div class="entry">
+                <label for="name" class="date">Date of Birth:</label>
+                <input type="date" name="name" id="date" placeholder="Enter name" required>
+            </div>
+            <div class="entry">
+                <label for="name" class="name">City:</label>
+                <input type="text" name="name" id="city" placeholder="Enter City" required>
+            </div>
+            <div class="entry">
+                <label for="name" class="name">Country:</label>
+                <input type="text" name="name" id="country" placeholder="Enter Country" required>
+            </div>
+            <div class="entry">
+                <label for="subscription" class="susbcription">Subscription:</label>
+                <div class="input" id="subscription">
+                    <p>Bronze</p>
+                    <p>Silver</p>
+                    <p>Gold</p>
+                </div>
+            </div>
+            <div class="entry">
+               <div></div>
+                <div class="buttom">
+                    <div id="cancel" class="cancel">CANCEL</div>
+                    <div id="confirm" class="confirm" onclick="submitForm()">CONFIRM</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Generator APP-Codex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="notes-header"><img src="images/sticky-notes.png" alt=""> Notes App</div>
+        <button class="btn"><img src="images/edit-text.png" alt="">Write new</button>
+        <div class="notes-container">
+            <!-- <p contenteditable="true" class="input-note">
+                <img src="images/x-mark.png" alt="">
+            </p> -->
+        </div>
+    </div>
+
+    <script>
+        const button = document.querySelector(".btn");
+        const notesContainer = document.querySelector(".notes-container");
+
+        function showNote(){
+            notesContainer.innerHTML = localStorage.getItem("notes") || ''
+        }
+        showNote()
+
+        function updateNote(){
+            localStorage.setItem("notes", notesContainer.innerHTML)
+        }
+        
+        button.addEventListener('click', ()=>{
+            let inputBox = document.createElement('p')
+            let img = document.createElement('img')
+            inputBox.setAttribute("contenteditable", "true");
+            inputBox.className = "input-note"
+            notesContainer.appendChild(inputBox).appendChild(img)
+            img.src = "images/x-mark.png"
+
+            inputBox.onkeyup =  ()=>{
+                updateNote()
+            }
+            updateNote()
+        })
+
+        notesContainer.addEventListener('click', (e)=>{
+            if(e.target.tagName === "IMG"){
+                e.target.parentElement.remove()
+                updateNote()
+            }
+        })
+
+        function reset(){
+           notes = document.querySelectorAll('.input-note');
+           notes.forEach((note)=>{
+            note.onkeyup = ()=>{
+                updateNote()
+            }
+           })
+        }
+
+        document.addEventListener("keydown", (e)=>{
+            if(e.key === "Enter"){
+                document.execCommand("insertLineBreak")
+                e.preventDefault()
+            }
+        })
+        
+
+    </script>
+</body>
+</html> 

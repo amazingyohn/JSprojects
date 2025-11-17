@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", 'Sans-serif';
+}
+
+:root{
+    --main-color:#0065E1;
+    --body-color:#01CF11;
+    --text-color: #ffff;
+    --addition-color: #000000;
+    --bg-color:rgba(199, 196, 193, 0.842);
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle at bottom left, #01CF11, #0065E1);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.page{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+}
+.left{
+    background: url(images/pharmacy\ \(1\).jpg)center/cover no-repeat;
+    object-fit: contain;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.left-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+}
+.left-header p{
+    font-size: 0.9rem;
+    font-weight: 600;
+    color:var(--body-color)
+}
+.fa-bars{
+    color: var(--body-color);
+    font-size: 1rem;
+}
+.background{
+    width: 100%;
+    height: 100%;
+    background-color: #fefffe44;
+    position: relative;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.middle-text h2{
+    margin-top: 60px;
+    font-size: 1.3rem;
+    color: var(--body-color);
+    margin-bottom: 0;
+}
+.middle-text p{
+    font-size: 0.6rem;
+    margin-top: 0;
+    line-height: 10px;
+    font-style: italic;
+    color: var(--body-color);
+}
+footer{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+footer p{
+    font-size: 0.5rem;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--body-color);
+    text-decoration: underline;
+}
+.right{
+    padding: 0 30px;
+    background-color: var(--text-color);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.right .header{
+    margin-bottom: 20px;
+}
+.right .header h1{
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: var(--body-color);
+}
+.right .header p{
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--body-color)
+}
+.entry{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 10px;
+    margin-bottom: 20px;
+}
+label{
+    color: var(--additional-color);
+    text-align: left;
+    margin-left: 20px;
+    font-size: 13px;
+}
+input{
+    min-width: 100px;
+    padding: 5px;
+    border-radius: 5px;
+    border-style: none;
+    outline: none;
+    max-height: 40px;
+    background-color: rgb(230, 229, 228);
+    margin-right: 30px;
+    cursor: pointer;
+}
+.input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 30px;
+    cursor: pointer;
+   
+}
+.female,.male{
+    background: var(--bg-color);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     margin-left: 5px;
+}
+.female:hover{
+    color: var(--text-color);
+    background-color: var(--body-color);
+}
+.male:hover{
+    color: var(--text-color);
+    background-color: var(--body-color);
+}
+
+.fa-mars,
+.fa-venus{
+    font-size: 12px;
+}
+.input p{
+    font-size: 10px;
+    color: #000000;
+    margin-left: 10px;
+}
+.buttom{
+    display: flex;
+}
+
+.cancel,
+.confirm{
+    background-color: #4b4d4c;
+    margin-right: 20px;
+    padding: 5px 8px;
+    color: var(--text-color);
+    border-radius: 5px;
+     cursor: pointer;
+}
+
+.confirm:hover{
+    background-color: #0065E1;
+}
+.cancel:hover{
+    background-color: #0065E1;
+}
+::placeholder{
+    font-size: 11px;
+}
+.input p:hover{
+    color: var(--body-color);
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop - Codex</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="left">
+            <div class="list" draggable="true"><img src="image/drag-and-drop.png" alt=""> List item 1</div>
+            <div class="list" draggable="true"><img src="image/drag-and-drop.png" alt=""> List item 2</div>
+            <div class="list" draggable="true"><img src="image/drag-and-drop.png" alt=""> List item 3</div>
+            <div class="list" draggable="true"><img src="image/drag-and-drop.png" alt=""> List item 4</div>
+        </div>
+        <div id="right">
+            
+        </div>
+    </div>
+ 
+    <script>
+        let leftBox = document.getElementById("left")
+        let righBox = document.getElementById("right")
+        let lists = document.getElementsByClassName("list")
+        let selected = null;
+
+        function updateBox(){
+            localStorage.setItem("list", )
+        }
+
+        for(list of lists){
+            list.addEventListener("dragstart",(e)=>{
+                selected = e.target;
+            })
+        }
+
+        [leftBox, righBox].forEach((box)=>{
+            
+            box.addEventListener("dragover", (e)=>{
+                e.preventDefault()
+            });
+            box.addEventListener("drop",(e)=>{
+                if(selected){
+                    box.appendChild(selected)
+                    selected = null
+            
+                }
+            })
+        })
+
+    </script>
+</body>
+</html>
